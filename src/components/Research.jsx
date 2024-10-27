@@ -55,14 +55,7 @@ const Portfolio = () => {
       Title:"A Hybrid Method for Fetal Heart Rate Classification,",
       detail:"- (published) Indian patent Application No. 20221064091 - Date of Publication: November 18, 2022.",
       link:" "
-    },
-    {
-      id:8,
-      src:r1,
-      Title:"A Hybrid Method for Fetal Heart Rate Classification,",
-      detail:"- (published) Indian patent Application No. 20221064091 - Date of Publication: November 18, 2022.",
-      link:" "
-    },
+    }
   ]
   return (
     <div
