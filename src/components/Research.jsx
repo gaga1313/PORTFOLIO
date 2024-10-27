@@ -48,13 +48,6 @@ const Portfolio = () => {
       Title:"Concept-Citation Directed Graph Based Scientific Paper Recommendation - CCSPR",
       detail:"Under Review",
       link:" "
-    },
-    {
-      id:7,
-      src:r1,
-      Title:"A Hybrid Method for Fetal Heart Rate Classification,",
-      detail:"- (published) Indian patent Application No. 20221064091 - Date of Publication: November 18, 2022.",
-      link:" "
     }
   ]
   return (
