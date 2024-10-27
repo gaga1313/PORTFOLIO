@@ -27,9 +27,9 @@ const About = () => {
         <p className="text-xl my-5">
         Hi there! Thanks for visiting my portfolio!
 
-I’m a Master in CS student<span className="font-extrabold"> @ Brown University </span>& an enthusiastic Computer Vision researcher immersed in the world of Autonomous System Perception and Planning. My area of interest lies in Few-shot object detection and tracking, Behaviour estimation, and Path Planning. I have solid fundamentals in probability, statistics, and linear algebra. With a rich background in advanced classification networks and attention models, I'm eagerly seeking opportunities to contribute as a Perception and Motion Planning Engineer intern within the industry. 
+I’m a dedicated computer science professional with a background in Machine Learning and Computer Vision, currently pursuing an MS in Computer Science at <span className="font-extrabold"> Brown University </span> with a 4.0 GPA. My experience includes working as a Machine Learning Engineer intern at Aarki, where I optimized ML models for ad-tech, and I’m proficient in Python, C++, and parallel programming using MPI and CUDA. I’m eager to apply my skills in designing and deploying algorithms while continuing to learn and grow in a collaborative environment.
 
-I am always open to collaborative research opportunities. Please feel free to reach out on LinkedIn or at <span className="font-extrabold">ggaonkar.work@gmail.com.</span>
+I am always open to collaborative research opportunities. Please feel free to reach out on LinkedIn or at <span className="font-extrabold">ggaonkar.work@gmail.com</span>
         </p>
       </div>
     </div>
