@@ -27,7 +27,7 @@ const About = () => {
         <p className="text-xl my-5">
         Hi there! Thanks for visiting my portfolio!
 
-I’m a dedicated computer science professional with a background in Machine Learning and Computer Vision, currently pursuing an MS in Computer Science at <span className="font-extrabold"> Brown University </span> with a 4.0 GPA. My experience includes working as a Machine Learning Engineer intern at Aarki, where I optimized ML models for ad-tech, and I’m proficient in Python, C++, and parallel programming using MPI and CUDA. I’m eager to apply my skills in designing and deploying algorithms while continuing to learn and grow in a collaborative environment.
+I m a dedicated computer science professional with a background in Machine Learning and Computer Vision, currently pursuing an MS in Computer Science at <span className="font-extrabold"> Brown University </span> with a 4.0 GPA. My experience includes working as a Machine Learning Engineer intern at Aarki, where I optimized ML models for ad-tech, and I am proficient in Python, C++, and parallel programming using MPI and CUDA. I am eager to apply my skills in designing and deploying algorithms while continuing to learn and grow in a collaborative environment.
 
 I am always open to collaborative research opportunities. Please feel free to reach out on LinkedIn or at <span className="font-extrabold">ggaonkar.work@gmail.com</span>
         </p>
