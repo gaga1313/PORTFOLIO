@@ -1,6 +1,6 @@
 import React from "react";
 import TypeWriter from "../components/Typewriter";
-import HeroImage from "../assets/portfolio/heroImage.jpeg"
+import HeroImage from "../assets/portfolio/gaurav.jpeg"
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { Link } from "react-scroll";
@@ -8,7 +8,6 @@ import mu from "../assets/portfolio/mu.jpg";
 import OLA from "../assets/portfolio/OLA.png";
 import Brown_University_Logo_full from "../assets/portfolio/Brown_University_Logo_full.png";
 import Stealth from "../assets/portfolio/Stealth.png";
-import CV from "../assets/portfolio/Gaurav_Gaonkar_CV.pdf"
 import carney from "../assets/portfolio/carney2.jpg"
 
  const University=[   
@@ -34,7 +33,7 @@ import carney from "../assets/portfolio/carney2.jpg"
     },]
 
 const Home = () => {
-  const typeWriter = ["Deep Learning Researcher", "Perception Engineer", "Reinforcement Learning Engineer"];
+  const typeWriter = ["Machine Learning & Computer Vision Engineer"];
 
   return (
     <div
@@ -44,10 +43,10 @@ const Home = () => {
       <div className="max-w-screen-lg mx-auto flex flex-col items-center  justify-center h-full  md:flex-row">
         <div className="flex flex-col justify-center md:mt-5 mt-5  h-full ">
         <h2 className="md:text-2xl mt-20 my-5 font-bold text-white md:mt-0 md:my-5">
-            Hey!
+            Hi!
           </h2>
           <h2 className="md:text-3xl text-5xl font-bold text-white">
-          I'm Gaurav Gaonkar
+          I'm Gaurav
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
           <span className="text-gray-500 text-2xl md:text-2xl font-bold py-2 max-w-full md:max-w-md mt-10 ">
@@ -58,7 +57,7 @@ const Home = () => {
           <div className="flex flex-row my-10 md:my-0">
           <p className="text-white bg-gradient-to-b from-green-500 to-green-300 p-2 md:p-2 sm:mx-[-1] text-xl hover:scale-y-110 duration-300 hover:text-xl  
         hover:text-white rounded-xl my-8 ">
-            <a href={CV} download>Resume</a> 
+            <a href="https://drive.google.com/file/d/1s8flZhFxkF1_f8ZW81_vAmw-YhtzSEW6/view">Resume</a> 
          </p>
          <div className=" flex flex-row justify-between p-2 mx-6 ">
               <p className="mx-2 bg-slate-300 p-2 rounded-2xl hover:scale-90 duration-300 my-6">

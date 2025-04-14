@@ -1,5 +1,5 @@
 import React from "react";
-import HeroImage from "../assets/portfolio/heroImage.jpeg";
+import HeroImage from "../assets/portfolio/gaurav.jpeg";
 
 const About = () => {
   return (
@@ -25,11 +25,7 @@ const About = () => {
         <br />
 
         <p className="text-xl my-5">
-        Hi there! Thanks for visiting my portfolio!
-
-I m a dedicated computer science professional with a background in Machine Learning and Computer Vision, currently pursuing an MS in Computer Science at <span className="font-extrabold"> Brown University </span> with a 4.0 GPA. My experience includes working as a Machine Learning Engineer intern at Aarki, where I optimized ML models for ad-tech, and I am proficient in Python, C++, and parallel programming using MPI and CUDA. I am eager to apply my skills in designing and deploying algorithms while continuing to learn and grow in a collaborative environment.
-
-I am always open to collaborative research opportunities. Please feel free to reach out on LinkedIn or at <span className="font-extrabold">ggaonkar.work@gmail.com</span>
+        I'm Gaurav, a CS Master’s graduate from Brown University with a strong background in machine learning, computer vision, and large-scale model optimization. My research, published at venues like ICLR, focused on bridging human perception and computer vision. With over two years of experience as an ML and Research Engineer intern at top tech companies, I’m passionate about building impactful AI systems and am actively seeking opportunities in applied ML, AI research, or engineering roles. Please feel free to reach out on LinkedIn or at <span className="font-extrabold">ggaonkar.work@gmail.com</span>
         </p>
       </div>
     </div>
