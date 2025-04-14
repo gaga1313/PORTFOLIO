@@ -24,11 +24,11 @@ const NavBar = () => {
     },
     {
       id: 5,
-      link: "Skills",
+      link: "Projects",
     },
     {
       id: 6,
-      link: "Projects",
+      link: "Skills",
     },
     {
       id:7,

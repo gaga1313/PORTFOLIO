@@ -1,84 +1,125 @@
 import React from "react";
-const Workexperincedata= [
+import vit from "../assets/portfolio/mu.jpg";
+import ola from "../assets/portfolio/OLA.png";
+import raga from "../assets/portfolio/ragai.jpeg";
+import brown from "../assets/portfolio/carney2.jpg"
+import aarki from "../assets/portfolio/aarki_logo.jpeg"
+
+const Workexperincedata = [
   {
-    Position:"Machine Learning Engineer",
-    Company:"Aarki Inc." ,
-    Startdate:"May 2024", enddate:"September 2024", 
-    Place:"San Francisco, CA, USA",
-    WorkDetail1:"Optimized stable diffusion model for display ad generation, improving animated ad retention by 10%.",
-    WorkDetail2:"Developed an exploration strategy by analyzing user profiles and feature-engineering transient user behavior into the model training pipeline, resulting in improved ROAS by winning high-value purchasers.",
-    WorkDetail3:"Gained insights into ML model deployment across ad-tech stages through collaboration with MLOps team.",
-    id:1
+    id: 1,
+    Position: "Machine Learning Engineer",
+    Company: "Aarki Inc.",
+    Startdate: "May 2024",
+    enddate: "September 2024",
+    Place: "San Francisco, CA, USA",
+    Logo: aarki,
+    Details: [
+      "Developed exploration strategy to identify high-value purchasers, reducing 35% of wasted spend at real-time bidding.",
+      "Optimized stable diffusion model for display ad generation, improving animated ad retention KPI by 10%.",
+      "Gained insights into ML model deployment across ad-tech stages through collaboration with MLOps team."
+    ]
   },
   {
-    Position:"Research Assistant",
-    Company:"Craney Institute for Brain Science" ,
-    Startdate:"September 2023", enddate:"Present", 
-    Place:"Brown University, USA",
-    WorkDetail1:"Trained and optimized Vision Transformer model for classifying extant leaf fossils into closest families. Implemented model explainability (CRAFT) revealing different strategies used by the model for classifying unknown fossils into closest families.",
-    WorkDetail2:"Evaluated computer vision models (Dinov2, CLIP, Vision Transformer, GANs, Stable Diffusion) for 3D properties like depth and surface normals.",
-    WorkDetail3:" ",
-    id:2
+    id: 2,
+    Position: "Research Assistant",
+    Company: "Craney Institute for Brain Science",
+    Startdate: "September 2023",
+    enddate: "Present",
+    Place: "Brown University, USA",
+    Logo: brown,
+    Details: [
+      <>
+        Evaluated large-scale generative diffusion models for shape bias, content classification, and 3D reasoning —{" "}
+        <a href="https://arxiv.org/abs/2406.04138" target="_blank" rel="noreferrer" className="text-teal-400 underline">ICLR 2025</a>
+      </>,
+      "Distributed training and optimization of vision transformer (ViT) for classifying extant leaf fossils into closest families.",
+      <>
+        Implemented model explainability pipeline revealing different strategies used by the model to classify fossils —{" "}
+        <a href="https://serre-lab.github.io/prj_fossil_unknown/" target="_blank" rel="noreferrer" className="text-teal-400 underline">website</a>
+      </>
+    ]
+  },  
+  {
+    id: 3,
+    Position: "Undergraduate Research Internship",
+    Company: "Vidyalankar Institute of Technology",
+    Startdate: "Dec 2021",
+    enddate: "Oct 2022",
+    Place: "Mumbai, India",
+    Logo: vit,
+    Details: [
+      "Developed Fetal Heart Rate Classification model detecting abnormalities in fetus’s breathing patterns using feature processing for non-linear dynamical systems.",
+      "Achieved an f1-score of 93% by training and evaluating ML classifiers (SVM, Random Forest, XGBoost) on extracted features"
+    ]
   },
   {
-    Position:"Undergraduate Research Internship ",Company:"Vidyalankar Institute of Technology, Guide: Professor Akhil Masurkar" ,Startdate:"Dec 2021", enddate:" Oct 2022", Place:"Mumbai, India",
-    WorkDetail1:"Led AI/ML implementation part of the research focused on classifying fetal health using audio-based data from electronic stethoscopes.",
-    WorkDetail2:"Used various feature extraction techniques such as Beats per minute, Recurrence Quantization analysis, 29 Statisticalfeatures (16 Time domain and 13 frequency domain) and chroma vector to extract data from digital stethoscope signals.",
-    WorkDetail3:"Implemented signal processing techniques, including Recurrent Quantification Analysis and Spectral Analysis on audio data, that performed with a test accuracy of 93%.",
-    id:3
+    id: 4,
+    Position: "Computer Vision Research Intern",
+    Company: "Raga AI",
+    Startdate: "Jan 2022",
+    enddate: "Apr 2022",
+    Place: "Remote, India",
+    Logo: raga,
+    Details: [
+      "Developed a GAN based video drift detection system, revealing aberrant changes in the predictions of vision models with an accuracy of 85%.",
+      "Designed 10+ evaluation metrics for bias detection and data leakage, ensuring model reliability in production environments.",
+      "Presented the new root cause analysis tool for the large-scale computer vision models to the stakeholders."
+    ]
   },
   {
-    Position:"Computer Vision Research Intern",
-    Company:"Raga AI" ,
-    Startdate:"January 2022", enddate:"April 2022", 
-    Place:"Remote,India",
-    WorkDetail1:"Implemented Dual Adversarial GAN network for data drift detection, identifying the need to retrain deep learning classifiers.",
-    WorkDetail2:"Develop 10+ quality assessment metrics for Computer Vision models on object detection tasks, revealing model inefficiencies in learning strategy, data leakage, and biases towards a particular object or category.",
-    WorkDetail3:" ",
-    id:4
-},
-{
-  Position:"Research Engineer Intern at Ola Electric Mobility Pvt. Ltd.",
-  Company:"Computer Vision Researcher in Ola Electric AI Team " ,Startdate:"July 2021", enddate:"Dec 2021",
-  Place:"Banglore,India",
-  WorkDetail1:"Developed a classical computer vision-based approach for tire damage detection on vehicles, with an overall accuracy of 72%.",
-  WorkDetail2:"Led the research by categorizing damages found in vehicle tires, leading data collection drives, and designing an approach for working under the constraint of a very limited amount of data.",
-  WorkDetail3:" ",
-  id:5
-}   ];
+    id: 5,
+    Position: "Research Engineer Intern",
+    Company: "Ola Electric Mobility Pvt. Ltd.",
+    Startdate: "Jul 2021",
+    enddate: "Dec 2021",
+    Place: "Bangalore, India",
+    Logo: ola,
+    Details: [
+      "Developed a deep learning-based vehicle tire damage detection system, managing data pipelines, model training, and deployment, achieving 82% accuracy.",
+      "Deployed a large-scale ML system in production, reducing vehicle maintenance costs by 60%."
+    ]
+  }
+];
+
 const Portfolio = () => {
   return (
     <div
       name="Work"
       className="w-full h-full bg-gradient-to-b from-gray-800 via-black to-black text-white"
     >
-       <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full py-20">
-        <div className="pb-8">
-          <p className="text-4xl font-bold inline border-b-2 border-gray-500">
+      <div className="max-w-screen-lg mx-auto px-6 py-20">
+        <div className="pb-12">
+          <h2 className="text-4xl font-bold border-b-4 border-gray-500 inline-block">
             Work Experience
-          </p>
+          </h2>
         </div>
-        {Workexperincedata.map((i) => (
-        <div className='flex flex-col border-b-2 pb-4 m-4'>
 
-          <div className='flex flex-row    justify-between  '>
-          <div className='flex flex-col m-2'>
-            <span className='font-bold text-lg'>{i.Position}</span>
-            <span className='font-sm text-m '>{i.Company}</span>
-          </div>
-          <div className='flex flex-col'>
-            <span className='font-bold'>{i.Startdate}-{i.enddate}</span>
-            <span className='font-extralight'>{i.Place}</span>
-          </div>
-          </div>
+        {Workexperincedata.map((job) => (
+          <div key={job.id} className="mb-10 border-b border-gray-700 pb-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                {job.Logo && (
+                  <img src={job.Logo} alt={job.Company} className="w-12 h-12 object-contain" />
+                )}
+                <div>
+                  <h3 className="text-xl font-semibold">{job.Position}</h3>
+                  <p className="text-sm text-gray-300">{job.Company}</p>
+                </div>
+              </div>
+              <div className="text-right">
+                <p className="font-semibold">{job.Startdate} – {job.enddate}</p>
+                <p className="text-sm text-gray-400">{job.Place}</p>
+              </div>
+            </div>
 
-          <div className='flex flex-col'>
-          <span className='text-semibold p-1'><span></span>{i.WorkDetail1}</span>
-          <span className='text-semibold p-1'><span></span>{i.WorkDetail2}</span>
-          
+            <ul className="mt-4 list-disc list-inside space-y-1 text-gray-200">
+              {job.Details.map((point, idx) => (
+                point && <li key={idx}>{point}</li>
+              ))}
+            </ul>
           </div>
-        </div>
-      ))}
+        ))}
       </div>
     </div>
   );

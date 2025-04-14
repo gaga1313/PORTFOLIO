@@ -14,8 +14,8 @@ function App() {
       <About />
       <Research />
       <WorkExp />
-      <Skills />
       <Project/>
+      <Skills />
       <Contact />
 
     </div>

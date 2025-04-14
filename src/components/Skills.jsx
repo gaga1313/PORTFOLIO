@@ -1,116 +1,55 @@
 import React from "react";
 
-const Experience = () => {
-  const techs = [
-    {
-      id: 1,
-   
-      title: "Keras",
-      style: "shadow-blue-600",
-    },
-    {
-      id: 2,
-     
-      title: "Pytorch",
-      style: "shadow-yellow-500",
-    },
-    {
-      id: 3,
-      
-      title: "Sklearn",
-      style: "shadow-[#97ABC9]",
-    },
-    {
-      id: 4,
-     
-      title: "Deep Graph Library",
-      style: "shadow-green-600",
-    },
-    {
-      id: 5,
-      
-      title: "Matlab",
-      style: "shadow-white",
-    },
-    {
-      id: 6,
-  
-      title: "OpenAI Gym",
-      style: "shadow-[#26522C]",
-    },
-    {
-      id: 7,
-   
-      title: "Python",
-      style: "shadow-[#0B821B]",
-    },
-    {
-      id: 8,
-     
-      title: "PostGress SQL",
-      style: "shadow-orange-600",
-    },
-    {
-      id: 9,
-      
-      title: "MongoDB",
-      style: "shadow-red-400",
-    },
-    {
-      id:10,
-      title:"Django",
-      style: "shadow-[#0B821B]",
-    },
-    {
-      id: 11,
-      
-      title: "Flask",
-      style: "shadow-[#ABC24D]",
-    },
-    {
-      id:12,
-      title:"C-Programming",
-      style: "shadow-white",
-    },
-    {
-      id: 13,
-      
-      title: "Windows",
-      style: "shadow-blue-400",
-    },  
-     {
-      id: 14,
-      title: "Linux",
-      style: "shadow-gray-400",
-    },    
-    {
-      id:15,
-      title:"GitHub",
-      style: "shadow-[#97ABC9]",
-    }
- 
-  ];
+const skills = {
+  "Programming Languages": [
+    "Python", "C++", "SQL", "JAX", "TensorFlow", "PyTorch", "Spark", "OpenMP", "MPI", "Cuda"
+  ],
+  "Machine Learning": [
+    "Supervised Learning", "Data Science", "RLHF", "LLMs", "Multimodal Transformers", "Diffusion Models", "Probability", "Statistics"
+  ],
+  "Systems Infrastructure": [
+    "Distributed Training", "Inference Optimization", "AWS", "Linux"
+  ],
+  "Web Development": [
+    "Django", "Flask", "ReactJS", "RDBMS", "Agile Development", "HTML", "CSS", "Git"
+  ],
+  "Databases": [
+    "MySQL", "PostgreSQL", "Kafka", "Redash", "ClickHouse"
+  ]
+};
 
+const Skills = () => {
   return (
     <div
       name="Skills"
-      className="w-full h-full  bg-gradient-to-b from-black  to-gray-800 text-white"
+      className="w-full min-h-screen px-6 py-24 bg-gradient-to-b from-black to-gray-900 text-white"
     >
-     <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full text-white">
-        <div>
-          <p className="text-4xl font-bold md:border-b-4 border-gray-500 p-2 inline">
-            TECHNOLOGIES AND SKILLS
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-14">
+          <h1 className="text-4xl md:text-5xl font-extrabold inline-block border-b-4 border-teal-500 pb-2">
+            Skills & Technologies
+          </h1>
+          <p className="mt-4 text-gray-400 text-lg max-w-xl mx-auto">
+            Tools I’ve mastered over time—across research, engineering, and product-building.
           </p>
-          <p className="py-6">These are the technologies I've worked with</p>
         </div>
 
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 gap-8 text-center py-8 px-12 sm:px-0">
-          {techs.map(({ id, src, title, style }) => (
-            <div
-              key={id}
-              className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg ${style}`}
-            >
-              <p className="mt-4 text-lg font-semiblod">{title}</p>
+        <div className="space-y-16">
+          {Object.entries(skills).map(([category, tools], idx) => (
+            <div key={idx}>
+              <h2 className="text-2xl md:text-3xl font-bold text-teal-400 mb-6 tracking-tight">
+                {category}
+              </h2>
+              <div className="flex flex-wrap gap-4">
+                {tools.map((skill, i) => (
+                  <div
+                    key={i}
+                    className="px-5 py-2 bg-gray-800/70 text-white rounded-full border border-teal-600 shadow-md hover:shadow-lg hover:-translate-y-1 transition-transform duration-300 text-sm sm:text-base"
+                  >
+                    {skill}
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -119,4 +58,4 @@ const Experience = () => {
   );
 };
 
-export default Experience;
+export default Skills;

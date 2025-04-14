@@ -7,17 +7,17 @@ import { Link } from "react-scroll";
 import mu from "../assets/portfolio/mu.jpg";
 import OLA from "../assets/portfolio/OLA.png";
 import Brown_University_Logo_full from "../assets/portfolio/Brown_University_Logo_full.png";
-import Stealth from "../assets/portfolio/Stealth.png";
-import carney from "../assets/portfolio/carney2.jpg"
+import Stealth from "../assets/portfolio/ragai.jpeg";
+import aarki from "../assets/portfolio/aarki_logo.jpeg"
 
- const University=[   
+  const University=[   
     {
       id: 1,
-      src: Brown_University_Logo_full,
+      src: aarki,
     },
     {
       id: 2,
-      src: carney,
+      src: Brown_University_Logo_full,
     },
     {
       id: 3,
