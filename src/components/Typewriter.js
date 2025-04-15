@@ -14,8 +14,6 @@ class TypeWriter extends React.PureComponent {
   componentDidMount() {
     this.unmounted = false;
     this.loopNum = 0;
-    this.period = 5000;
-    this.isDeleting = false;
     this.tick();
   }
 
@@ -24,41 +22,18 @@ class TypeWriter extends React.PureComponent {
   }
 
   tick() {
-    if (this.unmounted) {
-      return;
-    }
+    if (this.unmounted) return;
 
     const { data: toRotate } = this.props;
     const i = this.loopNum % toRotate.length;
     const fullTxt = toRotate[i];
 
-    let newText = "";
-    if (this.isDeleting) {
-      newText = fullTxt.substring(0, this.state.text.length - 1);
-    } else {
-      newText = fullTxt.substring(0, this.state.text.length + 1);
-    }
-
-    let delta = 200 - Math.random() * 100;
-
-    if (this.isDeleting) {
-      delta /= 2;
-    }
-
-    if (!this.isDeleting && newText === fullTxt) {
-      delta = this.period;
-      this.isDeleting = true;
-    } else if (this.isDeleting && newText === "") {
-      this.isDeleting = false;
-      this.loopNum++;
-      delta = 5000;
-    }
-
+    const newText = fullTxt.substring(0, this.state.text.length + 1);
     this.setState({ text: newText });
 
-    setTimeout(() => {
-      this.tick();
-    }, delta);
+    if (newText !== fullTxt) {
+      setTimeout(this.tick, 100); // Adjust speed here
+    }
   }
 
   render() {
