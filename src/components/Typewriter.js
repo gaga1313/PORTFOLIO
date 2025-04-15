@@ -14,7 +14,7 @@ class TypeWriter extends React.PureComponent {
   componentDidMount() {
     this.unmounted = false;
     this.loopNum = 0;
-    this.period = 10000;
+    this.period = 1000;
     this.isDeleting = false;
     this.tick();
   }
@@ -51,7 +51,7 @@ class TypeWriter extends React.PureComponent {
     } else if (this.isDeleting && newText === "") {
       this.isDeleting = false;
       this.loopNum++;
-      delta = 10000;
+      delta = 1000;
     }
 
     this.setState({ text: newText });

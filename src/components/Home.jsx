@@ -46,70 +46,83 @@ const Home = () => {
   return (
     <div
       name="Home"
-      className="h-full w-full bg-gradient-to-b from-white via-white to-gray-800 flex flex-col justify-around overflow-hidden"
+      className="min-h-screen w-full bg-gradient-to-b from-white via-white to-gray-800 flex flex-col justify-between overflow-hidden pt-20"
     >
-      {/* Top Hero Section */}
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full md:flex-row">
-        <div className="flex flex-col justify-center md:mt-5 mt-5 h-full">
-          <h2 className="text-2xl text-gray-800 font-semibold mt-8">Hi! 👋</h2>
-          <h1 className="text-5xl md:text-6xl font-extrabold text-black">I'm Gaurav</h1>
-          <p className="text-gray-600 text-xl mt-4">
+      {/* Hero Section */}
+      <div className="max-w-screen-xl mx-auto px-6 flex flex-col md:flex-row items-center justify-center min-h-[calc(100vh-6rem)]">
+        {/* Text Section */}
+        <div className="flex flex-col justify-center items-center md:items-start text-center md:text-left space-y-4">
+          <h2 className="text-2xl text-gray-800 font-semibold">Hi! 👋</h2>
+          <h1 className="text-5xl md:text-7xl font-extrabold text-black leading-tight">
+            I'm Gaurav
+          </h1>
+          <p className="text-gray-600 text-xl md:text-2xl">
             <TypeWriter data={typeWriter} />
           </p>
 
-          <div className="flex flex-row my-10 md:my-0">
-            <p className="text-white bg-gradient-to-b from-green-500 to-green-300 p-2 text-xl hover:scale-y-110 duration-300 rounded-xl my-8">
-              <a href="https://drive.google.com/file/d/1s8flZhFxkF1_f8ZW81_vAmw-YhtzSEW6/view" target="_blank" rel="noopener noreferrer">
-                Resume
+          {/* Resume + Icons */}
+          <div className="flex flex-wrap justify-center md:justify-start mt-6 gap-4">
+            <a
+              href="https://drive.google.com/file/d/1s8flZhFxkF1_f8ZW81_vAmw-YhtzSEW6/view"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white bg-gradient-to-b from-green-500 to-green-300 px-4 py-2 text-lg rounded-xl hover:scale-105 transition"
+            >
+              Resume
+            </a>
+
+            {/* Icons */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/in/gaurav-gaonkar-38481818b/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaLinkedin size={25} className="text-gray-700 hover:text-green-500 transition" />
               </a>
-            </p>
-            <div className="flex flex-row justify-between p-2 mx-6">
-              <a href="https://www.linkedin.com/in/gaurav-gaonkar-38481818b/" target="_blank" rel="noopener noreferrer">
-                <p className="mx-2 bg-slate-300 p-2 rounded-2xl hover:scale-90 duration-300 my-6">
-                  <FaLinkedin size={25} />
-                </p>
+              <a
+                href="https://github.com/gaga1313"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGithub size={25} className="text-gray-700 hover:text-green-500 transition" />
               </a>
-              <a href="https://github.com/gaga1313" target="_blank" rel="noopener noreferrer">
-                <p className="mx-2 bg-slate-300 p-2 rounded-2xl hover:scale-90 duration-300 my-6">
-                  <FaGithub size={25} />
-                </p>
-              </a>
-              <a href="https://scholar.google.com/citations?user=ox1pP3EAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
-                <p className="mx-2 bg-slate-300 p-2 rounded-2xl hover:scale-90 duration-300 my-6">
-                  <FaGraduationCap size={25} />
-                </p>
+              <a
+                href="https://scholar.google.com/citations?user=ox1pP3EAAAAJ&hl=en"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <FaGraduationCap size={25} className="text-gray-700 hover:text-green-500 transition" />
               </a>
               <Link to="Contact" smooth duration={500}>
-                <p className="mx-2 bg-slate-300 p-2 rounded-2xl hover:scale-90 duration-300 my-6">
-                  <HiOutlineMail size={25} />
-                </p>
+                <HiOutlineMail size={25} className="text-gray-700 hover:text-green-500 transition cursor-pointer" />
               </Link>
             </div>
           </div>
         </div>
 
         {/* Profile Image */}
-        <div className="ml-20 mr-10 mt-5 p-20 hidden md:block">
+        <div className="mb-10 md:mb-0 md:ml-16 mt-10 md:mt-0">
           <img
             src={HeroImage}
             alt="my profile"
-            className="rounded-2xl h-[40%] mx-10 w-2/3 mt-20 rounded-full hidden md:block md:w-full shadow-lg border-white"
+            className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover border-4 border-white shadow-xl"
           />
         </div>
       </div>
 
-      {/* Affiliations Carousel */}
-      <h2 className="text-center text-xl text-gray-700 font-semibold mt-10 mb-4">
-        Affiliations & Collaborations
-      </h2>
-      <div className="w-full px-4 pb-12 md:px-20">
+      {/* Carousel Section */}
+      <div className="w-full px-4 py-10 md:px-20">
+        <h2 className="text-center text-xl text-gray-700 font-semibold mb-6">
+          Affiliations & Collaborations
+        </h2>
         <Slider {...settings}>
           {University.map(({ id, src }) => (
             <div key={id} className="px-4 flex justify-center items-center">
               <img
                 src={src}
                 alt={`logo-${id}`}
-                className="h-32 w-auto object-contain mx-auto transition duration-300 hover:scale-105"
+                className="h-24 w-auto object-contain mx-auto transition duration-300 hover:scale-105"
               />
             </div>
           ))}
